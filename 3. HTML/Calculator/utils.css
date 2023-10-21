@@ -1,0 +1,20 @@
+.textCenter{
+    text-align: center;
+}
+.containerBgRed{
+    border: 2px solid black;
+    width: 450px;
+    background-color: rgb(210, 210, 210);
+}
+.mxAuto{
+    margin: auto;
+}
+.flex{
+display: flex;
+}
+.flexCol{
+    flex-direction: column;
+}
+.itemCenter{
+    align-items: center;
+}

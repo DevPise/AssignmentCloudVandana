@@ -1,0 +1,90 @@
+import java.util.Scanner;
+
+public class RomanToNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Roman Number : ");
+
+		String roman = sc.next();
+		romanToNumber(roman);
+
+		System.out.println("Integer of Entered Roman No is : ");
+
+	}
+	static void romanToNumber(String roman) {
+		String str = roman.toLowerCase();
+		int intNo = 0;
+		int result = 0;
+		int currentNo = 0;
+		boolean defaultExe = false;
+
+		for (int i = str.length()-1; i>= 0; i--) {
+			char c = str.charAt(i);
+			
+			switch (c) {
+
+			case 'i' : 
+				currentNo = 1;
+				break;
+			case 'v' : 
+				currentNo = 5;
+				break;
+			case 'x' : 
+				currentNo = 10;
+				break;
+
+			case 'l' : 
+				currentNo = 50;
+				break;
+
+			case 'c' : 
+				currentNo = 100;
+				break;
+
+			case 'd' : 
+				currentNo = 500;
+				break;
+
+			case 'm' : 
+				currentNo = 1000;
+				break;
+
+			default: defaultExe = true;
+			
+
+			} 
+			if(defaultExe) {
+				System.out.println("Enter Valid Number");
+			}else {
+			if (currentNo < intNo) {
+                result = result - currentNo;
+            } else {
+            	result = result + currentNo;
+            }
+			intNo = currentNo;
+			}
+		}
+		
+	}
+	static int number (char c){
+		switch (c) {
+
+		case 'i' : return 1;
+
+		case 'v' : return 5;
+
+		case 'x' : return 10;
+
+		case 'l' : return 50;
+
+		case 'c' : return 100;
+
+		case 'd' : return 500;
+
+		case 'm' : return 1000;
+
+		default: return 1;
+
+		} 
+	}
+}

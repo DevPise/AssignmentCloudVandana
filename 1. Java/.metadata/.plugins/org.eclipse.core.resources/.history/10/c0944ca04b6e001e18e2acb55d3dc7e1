@@ -1,0 +1,10 @@
+package package1;
+
+import java.util.Random;
+
+public class ShuffledArray {
+	public static void main(String[] args) {
+		Random rd = new Random();	}
+
+
+}

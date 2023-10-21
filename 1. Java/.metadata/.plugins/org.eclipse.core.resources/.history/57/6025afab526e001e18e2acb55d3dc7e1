@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class RomanToNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Roman Number : ");
+
+		String roman = sc.next();
+		romanToNumber(roman);
+
+	}
+	static int romanToNumber(String roman) {
+		String newStr = roman;
+		int intNo = 0;
+		
+		for (int i=0; i<roman.length(); i++) {
+			char c = newStr.charAt(i);
+			
+
+			switch (c) {
+
+			case 'i' : 
+				currentNo = 1;
+				break;
+
+			case 'v' : 
+				currentNo = 5;
+				break;
+
+			case 'x' : 
+				currentNo = 10;
+				break;
+
+			case 'l' : 
+				currentNo = 50;
+				break;
+
+			case 'c' : 
+				currentNo = 100;
+				break;
+
+			case 'd' : 
+				currentNo = 500;
+				break;
+
+			case 'm' : 
+				currentNo = 1000;
+				break;
+
+			default: System.out.println("enter valid no"); 
+
+			}
+		}
+		
+		int currentNo = 0;
+
+
+		return intNo;
+	}
+}
